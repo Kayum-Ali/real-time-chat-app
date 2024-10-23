@@ -6,3 +6,6 @@
   align-items: center;
   justify-content: space-evenly;
 }
+.login .logo {
+  width: max(20vw, 200px);
+}
