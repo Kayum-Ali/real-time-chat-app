@@ -3,6 +3,9 @@
 body {
   font-family: "Poppins", sans-serif;
 }
+img.dot {
+  width: 15px !important;
+}
 
 @tailwind base;
 @tailwind components;
