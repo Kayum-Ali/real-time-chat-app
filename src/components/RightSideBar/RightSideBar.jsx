@@ -1,4 +1,5 @@
 import assets from "../../assets/assets";
+import '../../styles/RightSideBar.css'
 const RightSideBar = () => {
     return (
         <div className="rs text-white bg-[#001030] relative h-[75vh] overflow-y-scroll">
@@ -8,9 +9,9 @@ const RightSideBar = () => {
                 <p className="text-[13px] opacity-80 font-light">Hey, there i am Mitu using Chat app</p>
             </div>
             <hr className="text-[#ffffff50] my-4"/>
-            <div className="rs-media">
+            <div className="rs-media px-5 text-xs">
                 <p>Media</p>
-                <div>
+                <div className="max-h-[180px] mt-2 gap-1 grid  grid-cols-3 ">
                      <img src={assets.pic1} alt="" />
                      <img src={assets.pic2} alt="" />
                      <img src={assets.pic3} alt="" />
@@ -19,7 +20,7 @@ const RightSideBar = () => {
                      <img src={assets.pic2} alt="" />
                 </div>
             </div>
-            <button>Logout</button>
+            <button className="absolute bottom-5 left-1/2 bg-[#007EFF] text-white border-none py-2.5 px-16 rounded-[20px] cursor-pointer  -translate-x-1/2">Logout</button>
             
         </div>
     );

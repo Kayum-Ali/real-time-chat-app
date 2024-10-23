@@ -1,0 +1,5 @@
+.rs-media div img {
+  /* width: 60px; */
+  border-radius: 5px;
+  cursor: pointer;
+}
