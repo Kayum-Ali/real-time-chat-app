@@ -5,7 +5,7 @@ import '../../styles/login.css'
 const Login = () => {
   const [currentState, setCurrentState] = useState('Sign Up')
     return (
-        <div className="login">
+        <div className="login flex-col lg:flex-row gap-10 py-12 lg:py-0 px-5">
            <img className="logo " src={assets.logo_big} alt="" />
            <form className="login-form bg-white py-5 px-[30px] flex flex-col gap-5 rounded-[10px] text-black">
                <h2 className="font-semibold text-2xl">{currentState}</h2>
