@@ -1,0 +1,12 @@
+.profile {
+  min-height: 100vh;
+  background: url("./background.png") no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.profile input,
+textarea {
+  @apply w-full px-3 py-2 text-sm bg-gray-200 rounded-md shadow-sm focus:outline-blue-500 placeholder:text-[#007EFF] text-[#007EFF] focus:bg-white;
+}
