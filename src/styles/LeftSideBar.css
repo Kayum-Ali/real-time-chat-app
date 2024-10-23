@@ -1,3 +1,9 @@
 .friends:hover span {
   color: white;
 }
+.menu .sub-menu {
+  display: none;
+}
+.menu:hover .sub-menu {
+  display: block;
+}
