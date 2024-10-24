@@ -6,7 +6,30 @@
   justify-content: center;
   align-items: center;
 }
+/* .profile input,
+textarea {
+  @apply w-full px-3 py-2 text-sm bg-gray-200 rounded-md shadow-sm focus:outline-blue-500 placeholder:text-[#007EFF] text-[#007EFF] focus:bg-white; */
+
 .profile input,
 textarea {
-  @apply w-full px-3 py-2 text-sm bg-gray-200 rounded-md shadow-sm focus:outline-blue-500 placeholder:text-[#007EFF] text-[#007EFF] focus:bg-white;
+  width: 100%;
+  padding: 2px 3px;
+  font-size: 0.875rem;
+  background-color: #e2e8f0;
+  border-radius: 0.375rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  outline: none;
+  transition: background-color 0.2s ease-in-out;
+  color: #007eff;
+}
+
+.profile input:focus,
+textarea:focus {
+  background-color: #fff;
+  outline-color: #3182ce;
+}
+
+.profile input::placeholder,
+textarea::placeholder {
+  color: #007eff;
 }

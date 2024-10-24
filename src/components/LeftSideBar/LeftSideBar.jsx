@@ -1,7 +1,9 @@
 
+import { useNavigate } from "react-router-dom";
 import assets from "../../assets/assets";
 import '../../styles/LeftSideBar.css'
 const LeftSideBar = () => {
+    const navigate = useNavigate()
     return (
         <div className="ls bg-[#001030] text-white h-[75vh]">
             <div className="ls-top p-5">
@@ -11,7 +13,7 @@ const LeftSideBar = () => {
                         <img className="max-h-[20px] opacity-60" src={assets.menu_icon} alt="" />
                         {/* sub menu */}
                         <div className="sub-menu absolute top-[100%] right-0 w-[130px] p-5 rounded-md bg-white text-black   ">
-                            <p className="cursor-pointer text-sm">Edit</p>
+                            <p onClick={()=> navigate('/profile')} className="cursor-pointer text-sm">Edit Profile</p>
                             <hr className="border-none h-[1px] bg-[#a4a4a4] my-2"/>
                             <p className="cursor-pointer text-sm">Logout</p>
 

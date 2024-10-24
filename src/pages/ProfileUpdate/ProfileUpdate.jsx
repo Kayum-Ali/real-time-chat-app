@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import assets from "../../assets/assets";
 import '../../styles/ProfileUpdate.css'
 import { onAuthStateChanged } from "firebase/auth";
@@ -7,10 +7,12 @@ import { doc, getDoc, updateDoc } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import upload from "../../lib/Upload";
+import  { AuthContext } from "../../context/AppContext";
 
 
 const ProfileUpdate = () => {
     const [images, setImages] = useState(false)
+    const {setUserData} = useContext(AuthContext)
 
     const [name , setName] = useState('')
     const [bio, setBio] = useState('')
@@ -43,6 +45,9 @@ const ProfileUpdate = () => {
                 })
 
             }
+            const snap = await updateDoc(docRef);
+            setUserData(snap.Data())
+            navigate('/chat')
         }
         catch(error){
             toast.error(error.message)
@@ -86,7 +91,7 @@ const ProfileUpdate = () => {
                     <textarea onChange={(e)=> setBio(e.target.value)} value={bio}  name="" id="" placeholder="write prifile bio" required></textarea>
                     <button type="submit" className="py-2.5 w-full bg-[#007EFF] text-white rounded-lg">Save</button>
                 </form>
-                <img className="profile-pic max-w-[160px] aspect-square my-5 mx-auto rounded-full" src={images? URL.createObjectURL(images) : assets.logo_icon} alt="" />
+                <img className="profile-pic max-w-[160px] aspect-square my-5 mx-auto rounded-full" src={images? URL.createObjectURL(images) : avatar? avatar :assets.logo_icon} alt="" />
             </div>
             
         </div>
