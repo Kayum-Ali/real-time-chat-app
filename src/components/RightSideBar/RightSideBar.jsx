@@ -1,5 +1,6 @@
 import assets from "../../assets/assets";
 import '../../styles/RightSideBar.css'
+import { logout } from "../../config/firebase.config";
 const RightSideBar = () => {
     return (
         <div className="rs text-white bg-[#001030] relative h-[75vh] overflow-y-scroll">
@@ -20,7 +21,7 @@ const RightSideBar = () => {
                      <img src={assets.pic2} alt="" />
                 </div>
             </div>
-            <button className="absolute bottom-5 left-1/2 bg-[#007EFF] text-white border-none py-2.5 px-16 rounded-[20px] cursor-pointer  -translate-x-1/2">Logout</button>
+            <button onClick={()=> logout()} className="absolute bottom-5 left-1/2 bg-[#007EFF] text-white border-none py-2.5 px-16 rounded-[20px] cursor-pointer  -translate-x-1/2">Logout</button>
             
         </div>
     );

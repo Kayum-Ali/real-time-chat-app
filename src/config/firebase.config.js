@@ -5,6 +5,7 @@ import { doc, getFirestore, setDoc } from "firebase/firestore";
 import { toast } from "react-toastify";
 
 
+
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
@@ -56,4 +57,4 @@ const logout = async()=>{
        toast.error(error.code.split('/')[1].split('-').join(' '))
    }
 }
-export {signUp, login,logout};
+export {signUp, login,logout,auth,db};
